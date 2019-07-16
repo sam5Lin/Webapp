@@ -7,7 +7,7 @@
   </block>
 </view>
 
-  <button class="button" bindtap='getInfo'> click me!</button>
+  <button class="button" open-type='getUserInfo' bindgetuserinfo='getInfo'> click me!</button>
 
   <view>
    

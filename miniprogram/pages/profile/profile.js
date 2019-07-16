@@ -8,32 +8,29 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-  
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-     
+  onLoad: function(options) {
+
     console.log(this.data)
   },
 
- 
 
-  getInfo: function (e) {
-    wx.getUserInfo({
-      success: res => {
-        app.globalData.userInfo = res.userInfo
-        this.setData({
-          userInfo: res.userInfo,
 
-        })
-      }
-    })
+  getInfo: function(e) {
+    console.log(e.detail.userInfo)
+    app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: app.globalData.userInfo,
       hasUserInfo: true
     })
+
+
+
+
   }
 })
