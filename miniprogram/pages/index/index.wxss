@@ -6,34 +6,32 @@ page{
   background-color: ghostwhite;
 }
 
-.container{
-  flex-flow: column nowrap;
-  height: 100%;
+
+
+.swiper-tab{
   width: 100%;
-  justify-content: top;
-  align-content: top;
-
-}
-
-
-.top{
-  flex: 0 0 50%;
-  background: linear-gradient(#4990e2, #87c1f1);
-  width: 100%;
-  height: 40%;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
-}
-
-.text{
+  border-bottom: 2rpx solid #ccc;
   text-align: center;
-  color: wheat;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.swiper-tab-item{
+  width: 30%; 
+  color:#434343;
+}
+.active{
+  color:#F65959;
+  border-bottom: 4rpx solid #F65959;
+}
+swiper{
+ text-align: center;
 }
 
-.button{
-  width: 375rpx;
-  background-color: #87c1f1;
-  text-align: center;
-  margin-top: 400rpx;
-
+.firstText{
+  color: #F65959;
 }
+
+

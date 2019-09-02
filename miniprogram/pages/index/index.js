@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    currentTab:0
   },
 
   /**
@@ -62,5 +62,29 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+
+  //首页的tab切换
+  swiperTab: function (e) {
+    var that = this;
+    console.log(e);
+    that.setData({
+      currentTab: e.detail.current
+    });
+  },
+
+  //点击切换
+  clickTab: function (e) {
+    var that = this;
+    console.log(e);
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
   }
+
 })
